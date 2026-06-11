@@ -1,0 +1,162 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Deep blue weather gradient */
+    color: #ffffff;
+    padding: 20px;
+}
+.app-title {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #ffffff, #feca57);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.app-container {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+
+#weather-form {
+    display: flex;
+    gap: 10px;
+}
+
+#location-input {
+    flex: 1;
+    padding: 16px 25px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    outline: none;
+    font-size: 1.1rem;
+}
+
+#location-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#weather-form button {
+    padding: 12px 24px;
+    border-radius: 25px;
+    border: none;
+    background: #ff6b6b; 
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#weather-form button:hover {
+    transform: scale(1.05);
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.hidden {
+    display: none;
+}
+
+.location {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.temperature {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin: 15px 0;
+}
+
+.conditions {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #feca57; 
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 100px;
+    }
+    .app-title {
+        position: static;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+
+.autocomplete-dropdown {
+    position: absolute;
+    top: 60px; /* Positions it right underneath your larger input bar */
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.suggestion-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1rem;
+    transition: background 0.2s;
+    text-align: left;
+}
+
+.suggestion-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.suggestion-item:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}

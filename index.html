@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>WeatherApp</title>
+</head>
+<body>
+    <h1 class="app-title">Clima</h1>
+    <div class="app-container">
+        <form id="weather-form">
+            <input type="text" id="location-input"  placeholder="Enter city (e.g., London, Tokyo)" 
+        required />
+            <button type="submit">Search Weather</button>
+        </form>
+        <div id="autocomplete-results" class="autocomplete-dropdown hidden"></div>
+        
+        <div id="weather-card" class="weather-card hidden">
+            <h1 id="display-address" class="location">City Name</h1>
+            
+            <div class="weather-main">
+                <h2 id="display-temp" class="temperature">--°</h2>
+            </div>
+            
+            <p id="display-conditions" class="conditions">Condition</p>
+            <p id="display-description" class="description">Detailed description will appear here.</p>
+        </div>
+    </div>
+    <script src="config.js"></script>
+   <script src="app.js"></script> 
+</body>
+</html>
