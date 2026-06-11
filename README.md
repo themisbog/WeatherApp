@@ -2,12 +2,6 @@
 
 Clima is a sleek, minimalist weather forecasting web application that leverages a modern glassmorphic interface to provide real-time global weather insights. Built with vanilla JavaScript and styled with custom responsive CSS, the application delivers precise weather metrics by processing structured payloads from the Visual Crossing API.
 
-![Clima Application UI Dashboard](<p align="center">
-  <img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=600&auto=format&fit=crop" alt="Nimbus Application UI Dashboard" width="350" style="border-radius: 12px;"/>
-</p>)
-
----
-
 ## 🚀 Core Features
 
 * **Instant Search Pipeline:** Retrieve real-time metrics for any global location seamlessly using a unified search mechanism.
